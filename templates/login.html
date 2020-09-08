@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('static/img/edit-bg.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Login Dashboard</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+   <div class="col-lg-6 col-md-10 mx-auto">
+   <h1 class="h3 mb-3 font-weight-bolder">Admin Log in</h1>
+   <div class="text-center"></div>
+   <form class="form-signin" action ="/dashboard" method="post">
+   </div>
+
+                <br>
+
+                <div class="col-lg-6 col-md-10 mx-auto">
+                <label for="uname" class="sr-only">Username</label>
+                <input type="text" class="form-control" placeholder="Username" name = "uname" id="uname" required autofocus>
+                <p class="help-block text-danger"></p>
+              </div>
+            
+
+              <div class="col-lg-6 col-md-10 mx-auto">
+              <label for="pass" class="sr-only">Password</label>
+              <input type="password" id="pass" name="pass" class="form-control" placeholder="Password" required>
+              <p class="help-block text-danger"></p>
+            </div>
+          
+          <div class="col-lg-6 col-md-10 mx-auto">    
+          <div class="checkbox mb-3">
+             <label >
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+           </div>
+         </div>
+
+           <div class="col-lg-6 col-md-10 mx-auto">          
+           <button class="btn btn-lg-10 btn-primary btn-block" type="submit">Sign in</button>  
+           </div>
+           <br>
+           <br>
+   </form>
+    
+    
+
+  
+
+  {% endblock %}

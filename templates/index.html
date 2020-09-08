@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{params['blog_name']}}</h1>
+            <span class="subheading">{{params['tagline']}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+
+
+        {% for post in pages.items %}
+        
+        <div class="post-preview">
+          <a href="/post/{{ post.slug }}">
+            <h2 class="post-title">
+             {{ post.title }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{ post.subtitle }}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Admin</a>
+            on {{ post.date }}</p>
+        </div>
+         {{ post.content[0:120] }}...
+        <hr>
+       
+        {% endfor %}
+        
+        
+
+
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a href="./?page={{ pages.prev_num }}"><button type = "button" class="btn btn-secondary float-left {% if not pages.has_prev %} disabled  {% endif %}"> &larr; Newer Posts </button></a>
+        
+          <a href="./?page={{ pages.next_num }}"><button type = "button" class="btn btn-secondary float-right {% if not pages.has_next %} disabled {% endif %}"> Older Posts &rarr;</button></a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
