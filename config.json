@@ -1,0 +1,21 @@
+{
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri" : "mysql://root:@localhost/coderecord",
+    "prod_uri" : "mysql://root:@localhost/coderecord",
+    "fb_url" : "https://facebook.com/coderecord",
+    "git_url" : "https://github.com/coderecord",
+    "twitter_url" : "https://twitter.com/coderecord",
+    "blog_name" : "CodeRecord",
+    "tagline" : "Records by Me!",
+    "user_gmail" : "garimarahangdale6@gmail.com",
+    "password_gmail" : "gar2997raha",
+    "about_me" : "Hey! I am Garima and this is my first website.",
+    "no.of post": 3,
+    "admin_user" : "garima_29",
+    "admin_password" : "ssdn@123",
+    "uploader_location": "D:\\PythonProjects\\Flask\\Website_2\\static\\uploadfiles",
+    "allowed_ext" : "{'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'docx'}"
+  }
+}
